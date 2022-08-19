@@ -1,5 +1,11 @@
 // Assignment code here
 function generatePassword() {
+  let characters = "";
+  let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
+  let upperCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let numbers = "01234567890";
+  let special_characters = "!@#$%^&*()"
+
   let password = "";
 
   // Get settings for password
@@ -9,11 +15,25 @@ function generatePassword() {
   }
 
   // Add lowercase, uppercase, numeric, and/or special characters
-  let lowercase = confirm("Contain lowercase letters?");
-  let uppercase = confirm("Contain uppercase letters?");
-  let numeric = confirm("Contain numbers?");
-  let special_characters = confirm("Contain Special characters?");
+  if (confirm("Contain lowercase letters?")) {
+    characters += lowerCharacters;
+  };
 
+  if (confirm("Contain uppercase letters?")) {
+    characters += upperCharacters;
+  };
+
+  if (confirm("Contain numbers?")) {
+    characters += numbers;
+  }
+
+  if (confirm("Contain Special characters?")) {
+    characters += special_characters;
+  };
+
+  if (characters === "") {
+    return alert("No characters selected");
+  }
   
   for (let i = 0; i < length ; i++) {
     password += i.toString();
