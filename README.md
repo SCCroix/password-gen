@@ -1,1 +1,5 @@
-# Password Generator Starter Code
+# Password Generator
+
+
+Sample of website
+![Screenshot](images/ScreenShot.png)
