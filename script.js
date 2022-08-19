@@ -4,7 +4,8 @@ function generatePassword() {
   let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
   let upperCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let numbers = "01234567890";
-  let special_characters = "!@#$%^&*()"
+  let special_characters = " \"!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+
 
   let password = "";
 
@@ -35,8 +36,9 @@ function generatePassword() {
     return alert("No characters selected");
   }
   
+  // Generate password from selected characters
   for (let i = 0; i < length ; i++) {
-    password += i.toString();
+    password += characters[Math.floor(Math.random()*characters.length)]
   }
 
   return password
