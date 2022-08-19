@@ -1,4 +1,26 @@
 // Assignment code here
+function generatePassword() {
+  let password = "";
+
+  // Get settings for password
+  let length = prompt("How many Characters?");
+  if (length < 8 || length > 128) {
+    return alert("Password length must be a number between 8 and 128");
+  }
+
+  // Add lowercase, uppercase, numeric, and/or special characters
+  let lowercase = confirm("Contain lowercase letters?");
+  let uppercase = confirm("Contain uppercase letters?");
+  let numeric = confirm("Contain numbers?");
+  let special_characters = confirm("Contain Special characters?");
+
+  
+  for (let i = 0; i < length ; i++) {
+    password += i.toString();
+  }
+
+  return password
+}
 
 
 // Get references to the #generate element
